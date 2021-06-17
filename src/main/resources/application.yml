@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/testdb
+    username: root
+    password: admin123
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+#    enabled: true
+#    default-schema: public
+#    spring.jpa.hibernate.ddl-auto=none
